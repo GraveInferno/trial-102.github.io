@@ -1,21 +1,225 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hello this is my first web page!." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="index.css" />
-  <script src="https://kit.fontawesome.com/42bbc13b53.js" crossorigin="anonymous"></script>
-
-
-
-  <title>Steel Supplier & Manufacturer in India | Tata Steel</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="icon" href="https://iconape.com/wp-content/files/pa/273000/png/tata-steel-logo.png" />
+  <script src="https://kit.fontawesome.com/42bbc13b53.js" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>HR Management || Tata Steel</title>
+  <style>
+    .carousel-image {
+      width: 110%;
+      height: 600px;
+      object-fit: cover;
+      margin:0;
+    }
+
+    /* Additional styles for your page */
+    .navbar {
+      background-color: #003366;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .navbar-nav .nav-link {
+      color: white;
+    }
+
+    .navbar-nav .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    .navbar-toggler-icon {
+      background-color: white;
+    }
+
+    .signin__button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .signin__button:hover {
+      background-color: #cc5200;
+    }
+    .company__card {
+      text-align: center;
+      padding: 50px;
+    }
+
+    .company__description {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .footer_row_1 {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer_row_2 {
+      display: flex;
+      justify-content: space-around;
+      background-color: #001f3f;
+      padding: 20px;
+      color: white;
+    }
+
+    .footer_row_3 {
+      background-color: #003366;
+      padding: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .footer_row_4 {
+      background-color: #001f3f;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .footer_row_4 .icons a {
+      color: white;
+      margin: 0 10px;
+    }
+
+    .footer_row_4 p {
+      margin-top: 10px;
+    }
+
+    .company__card{
+        color: white;
+    }
+
+    .nav__item{
+        color:black;
+    }
+
+    .FAQ__heading {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .FAQ_list_container {
+      max-width: 800px;
+      margin: 0 auto;
+      color: black;
+      background: #ffffff;
+    }
+
+    .FAQ__accordian {
+    margin-bottom: 20px;
+    width: 100%; /* Ensure full width of its container */
+    }
+
+ .FAQ__title {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 15px;
+  width: 100%; /* Make the button span full width */
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  }
+
+  .FAQ__title i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  }
+
+    .FAQ__visible {
+      display: none;
+      padding: 15px;
+      background-color: #ffffff;
+    }
+
+    .FAQ__visible p {
+      margin: 0;
+    }
+
+    .FAQ__accordian.active .FAQ__visible {
+      display: block;
+    }
+
+    .FAQ_getstarted_email {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .email_form_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .form__container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .email__input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .email__label {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 16px;
+      color: #999;
+      pointer-events: none;
+      transition: 0.2s;
+    }
+
+    .email__input:focus + .email__label,
+    .email__input:not(:placeholder-shown) + .email__label {
+      top: -10px;
+      left: 5px;
+      font-size: 12px;
+      color: #003366;
+    }
+
+    .primary__button {
+      background-color: #003366;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .primary__button i {
+      margin-left: 10px;
+    }
+    
+  </style>
 </head>
 
 <body>
@@ -26,31 +230,24 @@
       </div>
 
       <div class="navbar_nav_items">
-        <div class="nav__item">
-          <div class="dropdown__container">
-            <nav class="main-nav">
-              <a href="#home">Home</a>
-              <a href="#corporate">Corporate</a>
-              <a href="#sustainability">Sustainability</a>
-              <a href="#products">Products & Solutions</a>
-              <a href="#investors">Investors</a>
-              <a href="#media">Media</a>
-              <a href="#careers">Careers</a>
-              <a href="#contact">Contact</a>
-              <a href="#comingsoon">Coming Soon</a>
-            </nav>
-          </div>
-        </div>
+        <nav class="main-nav">
+          <a href="#home">Home</a>
+          <a href="#corporate">Corporate</a>
+          <a href="#sustainability">Sustainability</a>
+          <a href="#products">Products & Solutions</a>
+          <a href="#media">Media</a>
+          <a href="#careers">Careers</a>
+          <a href="#contact">Contact</a>
+        </nav>
         <div class="nav__item">
           <div class="dropdown__container">
             <i class="fas fa-globe"></i>
             <select name="languages" id="languagesSelect" class="language_drop_down">
-              <option value="english" selected style="color: black;">English</option>
-              <option value="hindi" style="color: rgb(250, 250, 250);">हिन्दी</option>
+              <option value="english" selected>English</option>
+              <option value="hindi">हिन्दी</option>
             </select>
           </div>
         </div>
-
         <div class="nav__item">
           <button class="signin__button">Sign in (Only for employees)</button>
         </div>
@@ -60,19 +257,8 @@
 
   <main>
     <section class="company">
-      <div class="company_bgvideo_container">
-        <video autoplay="" loop="" muted="" class="feature_backgroud_video">
-          <source
-            src="https://videocdn.cdnpk.net/videos/110a74ef-0fd3-4e3e-b6a4-c563625ab6a4/horizontal/previews/videvo_watermarked/large.mp4"
-            type="video/mp4" />
-        </video>
-      </div>
-      <div class="company_bg_overlay"></div>
-
       <div class="company__card">
-        <h1 class="__title">
-          Tata Steel : We also make Tomorrow
-        </h1>
+        <h1 class="title">Tata Steel: We also make Tomorrow</h1>
         <p class="company__subtitle"><i>Transforming for tomorrow</i></p>
         <p class="company__description">
           Founded over 150 years ago, the history of Tata group embodies, in many ways, the history of entrepreneurship,
@@ -80,85 +266,94 @@
           through a set of timelines that briefly highlight major milestones in its growth.
         </p>
       </div>
+      <div class="company_bgvideo_container">
+        <video autoplay loop muted class="feature_background_video">
+          <source src="https://videocdn.cdnpk.net/videos/110a74ef-0fd3-4e3e-b6a4-c563625ab6a4/horizontal/previews/videvo_watermarked/large.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="company_bg_overlay"></div>
     </section>
+
     <section class="features__container">
-      <!-- Feature 1 -->
-      <section class="main-container">
-        <div class="location" id="home">
-          <h3 class="feature__title">Most Popular</h3>
-          <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="https://www.nabjconvention.com/2024/JPG/NABJ4-CareerFair.jpg" alt="First slide">
-                <div class="carousel-caption d-none d-md-block">
-                   <h5>Recruitment</h5>
-                   <p>Career fairs, job opening and many more....</p>
-               </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://professionalsearchgroup.com.au/wp-content/uploads/2021/06/How-to-prepare-for-a-job-interview.jpg" alt="Second slide">
-                <div class="carousel-caption d-none d-md-block">
-                   <h5>Selection</h5>
-                   <p>Assessing a candidate's skills and experience</p>
-               </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://www.elegantthemes.com/blog/wp-content/uploads/2021/02/employee-onboarding-featured-image.jpg" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                   <h5>Onboarding</h5>
-                   <p>Being introduced to their team and workspace</p>
-               </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://community.connection.com/wp-content/uploads/2022/10/1916220-Intel-BLOG-Feature-Image.jpg" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                   <h5>Retention</h5>
-                   <p>Working productively</p>
-               </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://images.squarespace-cdn.com/content/v1/6348398d9d21fd6277c64f96/1fd2a336-fbc7-4c3e-8738-6b0a3011ccdf/tows+matrix+explainer+article+illustration+graphic.png?format=1500w" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                   <h5>Development</h5>
-                   <p>Attending a training session to develop skills and knowledge.</p>
-               </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://c7.alamy.com/comp/2C4N8E5/closeup-of-a-person-signing-an-exit-interview-form-2C4N8E5.jpg" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                   <h5>Offboarding</h5>
-                   <p>Departure : Last, but not the least !</p>
-               </div>
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://media.istockphoto.com/id/675698384/photo/fit-mature-couple-on-mountain-hike.jpg?s=2048x2048&w=is&k=20&c=pvfcIUdJndbW3yBB-gr8GH6iMIPiULHCsC3cbrHArKw=" alt="Third slide">
-                <div class="carousel-caption d-none d-md-block">
-                   <h5>Post Retirement</h5>
-                   <p>Enjoy pace of life and the freedom, all along with the organization.</p>
-               </div>
-              </div>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <div class="carousel-inner">
+          <!-- Carousel item 1 -->
+          <div class="carousel-item active">
+            <img class="d-block w-100 carousel-image" src="https://i0.wp.com/avenuemail.in/wp-content/uploads/2022/12/Dec.-15-2022-TSF2.jpg?resize=1024%2C684&ssl=1" alt="First slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Recruitment</h5>
+              <p>Career fairs, job openings, and many more....</p>
+            </div>
+          </div>
+          <!-- Carousel item 2 -->
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-image" src="https://professionalsearchgroup.com.au/wp-content/uploads/2021/06/How-to-prepare-for-a-job-interview.jpg" alt="Second slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Selection</h5>
+              <p>Assessing a candidate's skills and experience</p>
+            </div>
+          </div>
+          <!-- Carousel item 3 -->
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-image" src="https://www.elegantthemes.com/blog/wp-content/uploads/2021/02/employee-onboarding-featured-image.jpg" alt="Third slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Onboarding</h5>
+              <p>Being introduced to their team and workspace</p>
+            </div>
+          </div>
+          <!-- Carousel item 4 -->
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-image" src="https://images.squarespace-cdn.com/content/v1/6348398d9d21fd6277c64f96/1fd2a336-fbc7-4c3e-8738-6b0a3011ccdf/tows+matrix+explainer+article+illustration+graphic.png?format=1500w" alt="Fourth slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Retention</h5>
+              <p>Working productively
+              </p>
+            </div>
+          </div>
+          <!-- Carousel item 5 -->
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-image" src="https://community.connection.com/wp-content/uploads/2022/10/1916220-Intel-BLOG-Feature-Image.jpg" alt="Fifth slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Development</h5>
+              <p>Attending a training session to develop skills and knowledge</p>
+            </div>
+          </div>
+          <!-- Carousel item 6 -->
+          <div class="carousel-item">
+            <img class="d-block w-100 carousel-image" src="https://c7.alamy.com/comp/2C4N8E5/closeup-of-a-person-signing-an-exit-interview-form-2C4N8E5.jpg" alt
+            <img class="d-block w-100 carousel-image" src="https://c7.alamy.com/comp/2C4N8E5/closeup-of-a-person-signing-an-exit-interview-form-2C4N8E5.jpg" alt="Sixth slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Offboarding</h5>
+              <p>Departure : Last, but not the least !</p>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="FAQ">
+        <h2 class="FAQ__heading">Frequently Asked Questions</h2>
       </section>
-            <section class="FAQ_list_container">
-        <h1 class="FAQ__heading">Frequently Asked Questions</h1>
+    
+      <section class="FAQ_list_container">
         <div class="FAQ__list">
           <div class="FAQ__accordian">
             <button class="FAQ__title">
-              What is Tata Steel?<i class="fal fa-plus"></i>
+              What is Tata Steel?<i class="fas fa-plus"></i>
             </button>
             <div class="FAQ__visible">
               <p>
                 Formerly known as Tata Iron and Steel Company Limited (TISCO), Tata Steel is among the largest steel producing companies in the world, with an annual crude steel capacity of 35 million tonnes. It is one of the world's most geographically diversified steel producers, with operations and commercial presence across the world. The group (excluding SEA operations) recorded a consolidated turnover of US$31 billion in the financial year ending 31 March 2023. It is the largest steel company in India (measured by domestic production) with an annual capacity of 21.6 million tonnes after Steel Authority of India Ltd. (SAIL).
               </p>
-              <p> Tata Steel, SAIL, and Jindal Steel and Power, are the only three Indian steel companies that have captive iron-ore mines, which gives the three companies price advantages.
+              <p>
+                Tata Steel, SAIL, and Jindal Steel and Power, are the only three Indian steel companies that have captive iron-ore mines, which gives the three companies price advantages.
               </p>
             </div>
           </div>
+    
           <div class="FAQ__accordian">
             <button class="FAQ__title">
-              How much revenue does Tata Steel generates annually ?<i class="fal fa-plus"></i>
+              How much revenue does Tata Steel generate annually?<i class="fas fa-plus"></i>
             </button>
             <div class="FAQ__visible">
               <p>
@@ -166,102 +361,95 @@
               </p>
             </div>
           </div>
-          
+    
           <div class="FAQ__accordian">
             <button class="FAQ__title">
-              Any voluntary activites are conduted here ?<i class="fal fa-plus"></i>
+              Any voluntary activities conducted here?<i class="fas fa-plus"></i>
             </button>
             <div class="FAQ__visible">
               <p>
                 At Tata Steel, we encourage and enable our employees to contribute their time and skills to make a difference to the lives of many. Employee volunteerism is actively promoted across our organisation. We organise Tata Volunteering Weeks from March through September to encourage mass participation of employees in volunteering activities. Tree plantation and cleanliness drives, mentoring programmes, donations and interactions with children and the elderly are just some of the activities we undertake regularly.
               </p>
               <p>In India, we organise health camps apart from distributing mosquito nets and water purifiers to primary school students.</p>
-              <p>Our colleagues in Thailand work closely with local communities to improve their quality of life through various projects and organising training courses to develop local businesses.
-              </p>
+              <p>Our colleagues in Thailand work closely with local communities to improve their quality of life through various projects and organising training courses to develop local businesses.</p>
             </div>
           </div>
+    
           <div class="FAQ__accordian">
             <button class="FAQ__title">
-              Prospectus for career here ?<i class="fal fa-plus"></i>
+              Prospectus for career here?<i class="fas fa-plus"></i>
             </button>
             <div class="FAQ__visible">
               <p>
                 We thrive in a culture of respect, inclusion and diversity. At Tata Steel, we have made a conscious effort to build an equitable environment and a diverse leadership team. We have always been a pioneering and enlightened employer. We recognise that our people give us the competitive edge. Across the globe, our teams have a healthy mix of not just gender and age, but also culture, ethnicity and a myriad of other such aspects. We actively work against stereotypical biases to encourage a culture of meritocracy.
               </p>
               <p>
-                MOSAIC, our Diversity & Inclusion initiative established in 2015 for Indian operations, is a driver towards this goal. It defines the path the company has taken to build a people-oriented culture that both celebrates and encourages diversity and inclusion. The initiative has a five pillar approach that covers infrastructure, sensitisation, recruitment, retention and development, and celebration
+                MOSAIC, our Diversity & Inclusion initiative established in 2015 for Indian operations, is a driver towards this goal. It defines the path the company has taken to build a people-oriented culture that both celebrates and encourages diversity and inclusion. The initiative has a five pillar approach that covers infrastructure, sensitisation, recruitment, retention and development, and celebration.
               </p>
             </div>
           </div>
         </div>
+    
         <div class="FAQ_getstarted_email">
-          <h3>
-           Interested with us? Enter your email to create or login your account.
-          </h3>
+          <h3>Interested with us? Enter your email to create or login to your account.</h3>
           <div class="email_form_container">
             <div class="form__container">
               <input type="email" class="email__input" placeholder=" " />
               <label class="email__label">Email Address</label>
             </div>
             <button class="primary__button">
-              Get Started <i class="fal fa-chevron-right"></i>
+              Get Started <i class="fas fa-chevron-right"></i>
             </button>
           </div>
         </div>
       </section>
+    
+      <script>
+        document.querySelectorAll('.FAQ__title').forEach(button => {
+          button.addEventListener('click', () => {
+            const accordian = button.parentElement;
+            accordian.classList.toggle('active');
+          });
+        });
+      </script>
   </main>
 
   <footer>
-    <div class="footer_row_1">
-      <h4>Questions? Call 000-800-040-1843</h4>
-    </div>
     <div class="footer_row_2">
-      <div class="column__1">
-        <p>FAQ</p>
-        <p>Investor Relations</p>
-        <p>Privacy</p>
-        <p>Speed Test</p>
+      <div>
+        <h5>About Us</h5>
+        <p><a href="#">Company Overview</a></p>
+        <p><a href="#">Our History</a></p>
       </div>
-      <div class="column__2">
-        <p>Help Centre</p>
-        <p>Jobs</p>
-        <p>Cookie Preferences</p>
-        <p>Legal Notices</p>
+      <div>
+        <h5>Contact</h5>
+        <p><a href="#">Customer Support</a></p>
+        <p><a href="#">Investor Relations</a></p>
       </div>
-      <div class="column__3">
-        <p>Account</p>
-        <p>Ways to Watch</p>
-        <p>Corporate Information</p>
-        <p>Only on Netflix</p>
-      </div>
-      <div class="column__4">
-        <p>Media Centre</p>
-        <p>Terms of Use</p>
-        <p>Contact Us</p>
+      <div>
+        <h5>Follow Us</h5>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-instagram"></a>
       </div>
     </div>
     <div class="footer_row_3">
-      <div class="dropdown__container">
-        <i class="fas fa-globe"></i>
-        <select name="languages" id="languagesSelect" class="language_drop_down">
-          <option value="english" selected>English</option>
-          <option value="hindi">हिन्दी</option>
-        </select>
-      </div>
+      <p>Contact us: support@tatasteel.com | +123 456 7890</p>
     </div>
     <div class="footer_row_4">
-        <div class="icons">
-          <a href="https://m.facebook.com/TataSteelLtd/events/"><i class="fa-brands fa-facebook fa-2x"></i></a>
-          <a href="https://twitter.com/TataSteelLtd?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-twitter fa-2x"></i></a>
-          <a href="https://www.instagram.com/tatasteelltd/?hl=en"><i class="fa-brands fa-instagram fa-2x"></i></a>
-          <a href="https://www.youtube.com/channel/UCiBXZ5-vg78L_-_mcBhq6tw"><i class="fa-brands fa-youtube fa-2x"></i></a>
-        </div>
-        <p>&copy Tata Steel</p>
+      <p>Terms of Service | Privacy Policy</p>
+      <div class="icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
       </div>
+    </div>
+    <div class="footer_row_1">
+        <p>&copy; 2024 Tata Steel. All rights reserved.</p>
+    </div>
   </footer>
-
-  <script src="index.js"></script>
-
 </body>
 
 </html>
